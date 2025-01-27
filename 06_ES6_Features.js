@@ -1,6 +1,6 @@
 //💥 Mind-Blowing ES6 JavaScript Techniques Every Coder Should Know
 
-// 1)  let and const
+// 1)  let and const Are ES6 
 // 2)  Arrow Functions
 // 3)  Template Literals
 // 4)  Default Parameters
@@ -11,3 +11,9 @@
 // 9)  Promises
 // 10)  Async/Await
 // 11)  Try and Catch
+
+ 
+
+
+//Topic of ES6
+// 1)  let and const Are ES6
