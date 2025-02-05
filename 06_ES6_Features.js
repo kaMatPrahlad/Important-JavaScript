@@ -98,8 +98,6 @@ var [a, , b] = arr;
 // makes the code hard to read and debug. It is common in asynchronous programming with
 // callbacks. Callback Hell is also known as the Pyramid of Doom due to its shape.
 
-
-
 //Question 1:
 function getData(dataId, getNextData) {
   setTimeout(() => {
@@ -110,11 +108,11 @@ function getData(dataId, getNextData) {
   }, 2000);
 }
 
-getData(2, () => {
-  getData(3, () => {
-    getData(4);
-  });
-});
+// getData(2, () => {
+//   getData(3, () => {
+//     getData(4);
+//   });
+// });
 
 // 12) Try and catch
 //Question 1:
@@ -125,3 +123,17 @@ getData(2, () => {
 // } catch (error) {
 //   console.log("Caught an error:", error);
 // }
+
+function getData(getData, getNextData) {
+  //2 sec delay
+  setTimeout(() => {
+    console.log("Data is:", getData);
+    if (getNextData) getNextData();
+  }, 2000);
+}
+
+getData(1, () => {
+  getData(2, () => {
+    getData(4);
+  });
+});
