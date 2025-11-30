@@ -1,4 +1,10 @@
 // 1) Variables in JS
+// Ans-> Variables are containers to store data values.
+// In JavaScript, we can declare variables using 3 keywords:
+// 1. var
+// 2. let
+// 3. const
+// but now a days we use mostly let and const
 
 var a = 5;
 var b = 2;
