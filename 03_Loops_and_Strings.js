@@ -32,24 +32,28 @@
 // Strings are used to represent text in JavaScript.
 // They are a sequence of characters enclosed in single quotes (' '), double quotes (" "), or backticks (` `).
 
-let str = "Hello, World!";
-console.log(str.slice(1, 3)); // "el"
+// console.log(str.slice(1, 3)); // "el"
+
 // 🔧 Syntax of Split
+// In JavaScript, split() is basically your string-cutter tool.
+// It takes a string and chops it into smaller pieces based on whatever separator you give it — like a space, comma, dash, etc.
+// Then it returns an array of those pieces.
 // string.split(separator, limit);
 
 // separator → the thing you tell JS to cut by (like " ", ",", "-", etc.)
 
 // limit (optional) → how many pieces you want
-console.log(str.split("", 5)); // [ 'H', 'e', 'l', 'l', 'o' ]
+// console.log(str.split("", 5)); // [ 'H', 'e', 'l', 'l', 'o' ]
 
+let str = "Hello, World!";
 // Other String Methods Examples:
+// console.log(str.replace("World", "JavaScript")); // "Hello, JavaScript!"
+// console.log(str.charAt(5)); // index starts from 0, so charAt(5) returns ","
 // console.log(str); // "Hello, World!"
 // console.log(str.length); // 13
 // console.log(str.toUpperCase()); // "HELLO, WORLD!"
 // console.log(str.toLowerCase()); // "hello, world!"
-// console.log(str.replace("World", "JavaScript")); // "Hello, JavaScript!"
 // console.log(str.concat(" Welcome to JavaScript.")); // "Hello, World! Welcome to JavaScript."
-// console.log(str.charAt(7)); // "W"
 // console.log(str.indexOf("o")); // 4
 // console.log(str.lastIndexOf("o")); // 8
 // console.log(str.includes("World")); // true
