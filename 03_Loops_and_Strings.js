@@ -47,10 +47,10 @@
 
 let str = "Hello, World!";
 // Other String Methods Examples:
-// console.log(str.replace("World", "JavaScript")); // "Hello, JavaScript!"
-// console.log(str.charAt(5)); // index starts from 0, so charAt(5) returns ","
 // console.log(str); // "Hello, World!"
-// console.log(str.length); // 13
+// console.log(str.charAt(5)); // index starts from 0, so charAt(5) returns ","
+// console.log(str.replace("World", "JavaScript")); // "Hello, JavaScript!"
+// console.log(str.length); // 13 // length starts from 1
 // console.log(str.toUpperCase()); // "HELLO, WORLD!"
 // console.log(str.toLowerCase()); // "hello, world!"
 // console.log(str.concat(" Welcome to JavaScript.")); // "Hello, World! Welcome to JavaScript."
@@ -61,3 +61,9 @@ let str = "Hello, World!";
 // console.log(str.endsWith("!")); // true
 // console.log(str.trim()); // "Hello, World!"
 // console.log(str.repeat(2)); // "Hello, World!Hello, World!"
+
+// Let's practice Questionnns on Strings:
+// Answer of question set from Apna college Shradha Didi
+let Name = prompt("Enter your name:");
+let username = "@" + Name + Name.length;
+console.log(username);
