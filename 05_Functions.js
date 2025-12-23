@@ -152,3 +152,14 @@ console.log(total);
 // acc = 0, curr = 100 → acc = 100
 // acc = 100, curr = 200 → acc = 300
 // acc = 300, curr = 300 → acc = 600
+
+// Question no 14::
+// Filter out the students who scored above or equal to 90 from the array of student scores.
+const students = [20, 35, 90, 95, 100, 200, 300];
+
+const topStudents = students.filter((score) => score >= 90);
+console.log(topStudents);
+
+
+let n = prompt("Enter the Number?")
+const  arrs = arrays.map()
