@@ -71,8 +71,84 @@ function sum(num1, num2) {
 
 // Question no 9 :: Create an array of numbers & use the forEach method to print the square of each number.
 
-let nums = [2, 4, 7, 8, 3, 5];
+// let nums = [2, 4, 7, 8, 3, 5];
 
-nums.forEach((value) => {
-  console.log(value * value);
+// nums.forEach((value) => {
+//   console.log(value * value);
+// });
+
+// // Question no 10 ::
+// let nums = [2, 4, 7, 8, 3, 5];
+
+// let newArray = nums.map((value) => {
+//   console.log(value % 2 == 0);
+// });
+
+// console.log(newArray);
+
+// Question no 11 ::
+let nums = [12, 2, 4, 7, 8, 3, 5];
+
+let number = nums.filter((value) => {
+  return value % 2 === 0;
 });
+
+console.log(number);
+
+// Question no 12
+const numbers = [1, 2, 3, 4];
+
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+
+console.log(evenNumbers);
+
+// Question no 13
+
+// What is reduce() in JavaScript?
+
+// 👉 reduce() is an array method that reduces an array to a single value.
+
+// That single value can be:
+
+// a number (sum, total)
+
+// a string
+
+// an object
+
+// another array
+
+// In this example, we use reduce() to calculate the sum of all numbers in the nums array. The accumulator starts at 0, and for each element in the array,
+//  we add the current value to the accumulator. The final result is the total sum of the array elements.
+
+// | Term                  | Meaning                       |
+// | --------------------- | ----------------------------- |
+// | accumulator (`acc`)   | Stores the result             |
+// | currentValue (`curr`) | Current array item            |
+// | initialValue          | Starting value of accumulator |
+
+// const nums1 = [1, 2, 3, 4, 5];
+
+// const sums = nums1.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// }, 0);
+
+// console.log(sums);
+
+// Step-by-step:
+// acc = 0, curr = 1 → acc = 1
+// acc = 1, curr = 2 → acc = 3
+// acc = 3, curr = 3 → acc = 6
+// acc = 6, curr = 4 → acc = 10
+// acc = 10, curr = 5 → acc = 15
+
+const cart = [100, 200, 300];
+
+const total = cart.reduce((total, price) => total + price, 0);
+
+console.log(total);
+
+// Step-by-step:
+// acc = 0, curr = 100 → acc = 100
+// acc = 100, curr = 200 → acc = 300
+// acc = 300, curr = 300 → acc = 600
