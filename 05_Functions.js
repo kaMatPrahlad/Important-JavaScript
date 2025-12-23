@@ -159,7 +159,3 @@ const students = [20, 35, 90, 95, 100, 200, 300];
 
 const topStudents = students.filter((score) => score >= 90);
 console.log(topStudents);
-
-
-let n = prompt("Enter the Number?")
-const  arrs = arrays.map()
