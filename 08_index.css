@@ -31,7 +31,16 @@ body {
   width: 18vmin;
   border-radius: 1rem;
   border: none;
-  box-shadow: 10px 5px 5px rgba(186, 9, 9, 0.55);
+  box-shadow: 10px 5px 5px rgba(186, 9, 90.55);
   font-size: 8vmin;
   color: #b0413e;
+}
+
+#reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
 }
