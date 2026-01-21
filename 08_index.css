@@ -16,6 +16,10 @@ body {
   align-items: center;
 }
 
+#header {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+}
 .game {
   height: 60vmin;
   width: 60vmin;
@@ -27,8 +31,8 @@ body {
 }
 
 .box {
-  height: 18vmin;
-  width: 18vmin;
+  height: 16vmin;
+  width: 16vmin;
   border-radius: 1rem;
   border: none;
   box-shadow: 10px 5px 5px rgba(186, 9, 90.55);
@@ -44,4 +48,24 @@ body {
   color: #fff;
   border-radius: 1rem;
   border: none;
+}
+
+#new-btn {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+}
+#message {
+  font-size: 5vmin;
+  color: #ffffc7;
+}
+
+/* .msg-container {
+  
+}  */
+.hide {
+  display: none;
 }
