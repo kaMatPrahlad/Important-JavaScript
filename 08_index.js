@@ -5,6 +5,7 @@ let msgContainer = document.querySelector(".msg-container");
 let newGameBtn = document.querySelector("#new-btn");
 
 let turnO = true;
+let count = 0; //To Track Draw index from 0 to 9
 // true = X; false = O
 
 const winPatterns = [
@@ -19,6 +20,7 @@ const winPatterns = [
 ];
 
 const resetGame = () => {
+  //After clicking reset button start new game with Resets turn to O
   turnO = true;
   enableBoxes();
   msgContainer.classList.add("hide");
@@ -37,19 +39,23 @@ boxes.forEach((box) => {
       turnO = true;
     }
     box.disabled = true;
+    count++;
 
-    checkWin();
+    let iswinner = checkWin();
+    if (count == 9 && !iswinner) {
+      showDraw();
+    }
   });
 });
 
-// enables all boxes after win is found
+// reset & start a new game
 const enableBoxes = () => {
   boxes.forEach((box) => {
     box.disabled = false;
     box.innerText = "";
   });
 };
-// disable all boxes after win is found
+// disable all boxes after win is found in the Game
 const disableBoxes = () => {
   boxes.forEach((box) => {
     box.disabled = true;
@@ -62,6 +68,12 @@ const showWinner = (winner) => {
   disableBoxes();
 };
 
+// Show Draw message on screen
+const showDraw = () => {
+  msg.innerText = `Game was a Draw`;
+  msgContainer.classList.remove("hide");
+  disableBoxes();
+};
 // Whole logic to check winning patterns
 const checkWin = () => {
   for (let pattern of winPatterns) {
@@ -74,7 +86,7 @@ const checkWin = () => {
     /// Check if they are same and not empty
     if (post1Val != "" && post2Val != "" && post3Val != "") {
       if (post1Val == post2Val && post2Val == post3Val) {
-        console.log("We have a winner: " + post1Val);
+        // console.log("We have a winner: " + post1Val);
         showWinner(post1Val);
       }
     }
