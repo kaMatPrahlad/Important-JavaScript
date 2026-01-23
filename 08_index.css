@@ -58,8 +58,8 @@ body {
   border-radius: 1rem;
   border: none;
 }
-#message {
-  font-size: 5vmin;
+#msg {
+  font-size: 4vmin;
   color: #ffffc7;
 }
 
