@@ -19,10 +19,9 @@ const winPatterns = [
 ];
 
 const resetGame = () => {
-  boxes.forEach((box) => {
-    box.innerText = "";
-    box.removeAttribute("disabled");
-  });
+  turnO = true;
+  enableBoxes();
+  msgContainer.classList.add("hide");
 };
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
@@ -37,22 +36,30 @@ boxes.forEach((box) => {
       box.innerText = "X";
       turnO = true;
     }
-    box.disabled = "true";
+    box.disabled = true;
 
     checkWin();
   });
 });
 
+// enables all boxes after win is found
+const enableBoxes = () => {
+  boxes.forEach((box) => {
+    box.disabled = false;
+    box.innerText = "";
+  });
+};
 // disable all boxes after win is found
 const disableBoxes = () => {
   boxes.forEach((box) => {
-    box.disabled = "true";
+    box.disabled = true;
   });
 };
 // Show winner message on screen
 const showWinner = (winner) => {
   msg.innerText = `Winner is: ${winner}`;
   msgContainer.classList.remove("hide");
+  disableBoxes();
 };
 
 // Whole logic to check winning patterns
@@ -69,12 +76,14 @@ const checkWin = () => {
       if (post1Val == post2Val && post2Val == post3Val) {
         console.log("We have a winner: " + post1Val);
         showWinner(post1Val);
-        disableBoxes();
       }
     }
   }
 };
 
+newGameBtn.addEventListener("click", () => {
+  resetGame();
+});
 resetBtn.addEventListener("click", () => {
   resetGame();
 });
