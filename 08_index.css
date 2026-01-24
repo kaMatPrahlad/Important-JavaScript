@@ -60,7 +60,7 @@ body {
 }
 #msg {
   font-size: 4vmin;
-  color: #ffffc7;
+  color: #0723c1;
 }
 
 /* .msg-container {
@@ -68,4 +68,16 @@ body {
 }  */
 .hide {
   display: none;
+}
+
+.x {
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.o{
+  color: blue;
+  font-size: 2rem;
+  font-weight: bold;
 }

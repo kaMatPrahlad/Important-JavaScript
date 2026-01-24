@@ -6,7 +6,10 @@ let newGameBtn = document.querySelector("#new-btn");
 
 let turnO = true;
 let count = 0; //To Track Draw index from 0 to 9
-// true = X; false = O
+// Controls whose turn it is
+// true = O; false = X
+
+// All possible winning patterns
 
 const winPatterns = [
   [0, 1, 2],
@@ -21,7 +24,8 @@ const winPatterns = [
 
 const resetGame = () => {
   //After clicking reset button start new game with Resets turn to O
-  turnO = true;
+  // turnO = true;
+  count = 0;
   enableBoxes();
   msgContainer.classList.add("hide");
 };
@@ -32,17 +36,21 @@ boxes.forEach((box) => {
     if (turnO) {
       //Player O's turn
       box.innerText = "O";
+      box.classList.add("o");
+      // box.classList.remove("x");
       turnO = false;
     } else {
       //Player X's turn
       box.innerText = "X";
+      box.classList.add("x");
+      // box.classList.remove("o");
       turnO = true;
     }
     box.disabled = true;
     count++;
 
     let iswinner = checkWin();
-    if (count == 9 && !iswinner) {
+    if (count === 9 && !iswinner) {
       showDraw();
     }
   });
@@ -53,6 +61,7 @@ const enableBoxes = () => {
   boxes.forEach((box) => {
     box.disabled = false;
     box.innerText = "";
+    // box.classList.remove("x, o");
   });
 };
 // disable all boxes after win is found in the Game
