@@ -2,6 +2,10 @@ let userScore = 0;
 let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
+const msg = document.querySelector("#msg");
+
+const userScorepara = document.querySelector("#user-score");
+const compScorepara = document.querySelector("#comp-score");
 
 const genComputerChoice = () => {
   // Rock, Paper, Scissors
@@ -11,17 +15,23 @@ const genComputerChoice = () => {
 };
 
 const drawGame = () => {
-  console.log("Game was Draw.");
+  //   console.log("Game was Draw.");
+  msg.innerText = "It's a Draw, Play again!";
+  msg.style.backgroundColor = "#081b31";
 };
-const showWinner = () => {
-  console.log("User Wins.");
+const showWinner = (userId, compChoice) => {
+  userScore++;
+  userScorepara.innerText = userScore;
+
+  msg.innerText = `User Wins! Your ${userId} beats ${compChoice}`;
+  msg.style.backgroundColor = "green";
 };
 const playGame = (userId) => {
-  console.log("User choice", userId);
+  console.log("User choice = ", userId);
 
   //Generate computer choice- rock, paper, scissors
   const compChoice = genComputerChoice();
-  console.log("Computer choice", compChoice);
+  console.log("Computer choice = ", compChoice);
 
   // if user choice and computer choice are the same- it's a Draw
   if (userId === compChoice) {
@@ -34,9 +44,14 @@ const playGame = (userId) => {
       (userId === "paper" && compChoice === "rock") ||
       (userId === "scissors" && compChoice === "paper")
     ) {
-      showWinner();
+      // User Wins
+      showWinner(userId, compChoice);
     } else {
-      console.log("Computer Wins.");
+      // Computer Wins
+      compScore++;
+      compScorepara.innerText = compScore;
+      msg.innerText = `Computer Wins! ${compChoice} beats your ${userId}`;
+      msg.style.backgroundColor = "red";
     }
   }
 };
@@ -48,6 +63,3 @@ choices.forEach((choice) => {
     playGame(userId);
   });
 });
-
-// let userScore = document.getElementById("#user-score");
-// let compScore = document.getElementById("#comp-score");
