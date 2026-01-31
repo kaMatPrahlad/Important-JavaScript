@@ -4,8 +4,11 @@ let person = {
   age: 22,
 };
 
-// Whst is clases in JavaScript?
-
+// What is clases in JavaScript?
+// In JavaScript, a class is a blueprint for
+// creating objects with predefined properties and methods.
+// Classes were introduced in ECMAScript 2015 (ES6) as a
+// syntactical sugar over JavaScript's existing prototype-based inheritance.
 
 class Person {
   constructor(name, age) {
