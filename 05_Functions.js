@@ -100,7 +100,7 @@ const numbers = [1, 2, 3, 4];
 
 const evenNumbers = numbers.filter((num) => num % 2 === 0);
 
-console.log(evenNumbers);
+// console.log(evenNumbers);
 
 // Question no 13
 
@@ -146,7 +146,7 @@ const cart = [100, 200, 300];
 
 const total = cart.reduce((total, price) => total + price, 0);
 
-console.log(total);
+// console.log(total);
 
 // Step-by-step:
 // acc = 0, curr = 100 → acc = 100
@@ -155,7 +155,15 @@ console.log(total);
 
 // Question no 14::
 // Filter out the students who scored above or equal to 90 from the array of student scores.
-const students = [20, 35, 90, 95, 100, 200, 300];
+// const students = [20, 35, 90, 95, 100, 200, 300];
 
-const topStudents = students.filter((score) => score >= 90);
-console.log(topStudents);
+// const topStudents = students.filter((score) => score >= 90);
+// console.log(topStudents);
+
+//Question 15:: Create a function into another function and execute it inside.
+function abcd(val) {
+  val();
+}
+abcd(function () {
+  console.log("hey! Im inside the function");
+});

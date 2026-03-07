@@ -7,7 +7,7 @@
 //   });
 // }
 
-// // Promise chnaining Exmaple
+// ✅Promise chaining Exmaple
 
 // function asyncFun2() {
 //   return new Promise((resolve, reject) => {
@@ -23,14 +23,13 @@
 // p1.then((result) => {
 //   console.log("Promise Fullfilled", result);
 //   console.log("Fetching Data2....");
+// p1.catch((error) => {
+//   console.log("Promise Rejected", error);
+// });
 
 //   asyncFun2().then((result2) => {
 //     console.log("Promise Fullfilled 2", result2);
 //   });
-// });
-
-// p1.catch((error) => {
-//   console.log("Promise Rejected", error);
 // });
 
 // 2 - Async/Await Example

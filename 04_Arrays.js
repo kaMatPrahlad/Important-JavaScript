@@ -42,9 +42,10 @@ let student = [85, 97, 44, 37, 76, 60];
 // }
 
 // console.log(sum / student.length);
-// Ans :: The output of the above code will be 65.5. This is the average marks of the class.
+// Ans :: The output of the above code will be 65.5.
+// This is the average marks of the class.
 
-// :: Array Methods in JavaScript ::
+// ✅Array Methods in JavaScript ::
 // 1) push() Method
 // 2) pop() Method
 // 3) toString() Method
@@ -94,7 +95,33 @@ fruits2.splice(1, 0, "Lemon", "Kiwi");
 //3 Add Amazon at the End of the array
 
 let Companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+//⬇️ Remove the first Company from the array
 Companies.shift();
+//⬇️ Remove / add / replace elements
 Companies.splice(2, 1, "Ola");
+//⬇️ Add Amazon at the End of the array
 Companies.push("Amazon");
-console.log(Companies);
+// console.log(Companies);
+
+// Map Method
+// The map() method creates a new array
+// by performing a function
+// on each array element.
+
+let names = ["Harshit", "Rohan", "Aman", "Shubham"];
+names.map((name) => {
+  //   console.log(name);
+});
+
+// Filter Method
+// The filter() method creates a new array
+// with array elements that pass a test
+// provided by a function.
+
+let numbers = [5, 7, 8, 3, 1, 9, 4, 2];
+const evenNumber = numbers.filter((num) => num % 2 === 0);
+// console.log(evenNumber);
+// numbers.filter((num) => {
+//   //   console.log(num);
+//   return num !== 2;
+// });
