@@ -161,9 +161,19 @@ const total = cart.reduce((total, price) => total + price, 0);
 // console.log(topStudents);
 
 //Question 15:: Create a function into another function and execute it inside.
-function abcd(val) {
-  val();
+// function abcd(val) {
+//   val();
+// }
+// abcd(function () {
+//   console.log("hey! Im inside the function");
+// });
+
+//Question 16::
+function discountCalculater(discount) {
+  return function (price) {
+    return price - price * (discount / 100);
+  };
 }
-abcd(function () {
-  console.log("hey! Im inside the function");
-});
+
+let ten = discountCalculater(20);
+console.log(ten(1200));
