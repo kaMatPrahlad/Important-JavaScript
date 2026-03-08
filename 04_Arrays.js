@@ -122,6 +122,42 @@ let numbers = [5, 7, 8, 3, 1, 9, 4, 2];
 const evenNumber = numbers.filter((num) => num % 2 === 0);
 // console.log(evenNumber);
 // numbers.filter((num) => {
-//   //   console.log(num);
+//   console.log(num);
 //   return num !== 2;
 // });
+
+// Question 1 :: Create an array with 4 fruits and print the second fruits.
+
+let phal = ["Apple", "orange", "Banana", "grapes"];
+// console.log(phal[1]);
+phal.push("mango");
+// phal.unshift("Pineapple");
+// phal.splice(1, 0, "Red", "Blue");
+// phal.splice(1, 2);
+// phal.sort().reverse();
+// console.log(phal);
+
+let arr = [5, 12, 8, 20, 30, 40];
+
+let newArray = arr.filter((val) => {
+  return val > 10;
+});
+
+// console.log(newArray);
+
+// destructure this array to get firstname and lastname
+let fullname = ["Prahlad", "Kamat"];
+// let [firstname, lastname] = fullname;
+
+let a = [1, 2];
+let b = [3, 4];
+let country = ["USA", "UK"];
+let countris = ["India", ...country];
+
+// let c = [...a, ...b];
+// console.log(country, ...countris);
+
+// Clone this array properly (Not by reference):
+let array = [1, 2, 3, 4];
+let ans = [...array];
+console.log(ans);
