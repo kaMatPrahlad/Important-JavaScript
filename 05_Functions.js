@@ -168,12 +168,29 @@ const total = cart.reduce((total, price) => total + price, 0);
 //   console.log("hey! Im inside the function");
 // });
 
-//Question 16::
+//Question 16::Create a reusable discount calculater (High order function)
+
 function discountCalculater(discount) {
   return function (price) {
     return price - price * (discount / 100);
   };
 }
 
-let ten = discountCalculater(20);
-console.log(ten(1200));
+let ten = discountCalculater(10);
+console.log(ten(100));
+
+//Question 17:: Create a pure function to transform a value
+
+// function double(val) {
+//   return val * 2;
+// }
+// console.log(double(5));
+
+//Question 18:: Use IIFE(Immediately Invoked Function Expression) to isolate variables
+
+(function () {
+  const password = "secret password";
+  console.log(password);
+})();
+
+console.log(password);
