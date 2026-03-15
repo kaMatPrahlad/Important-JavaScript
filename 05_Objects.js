@@ -63,3 +63,12 @@ const Person = {
 const names = ["pedro", "maria", "juan"];
 const names2 = [...names, "lucas", "ana"];
 console.log(names2); // Output: ["pedro", "maria", "juan", "lucas", "ana"]
+
+let obj = {
+  name: "Prahlad",
+  age: 22,
+  isEnrolled: true,
+};
+
+console.log(obj);
+obj["name"];
